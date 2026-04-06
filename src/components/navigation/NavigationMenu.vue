@@ -56,39 +56,40 @@
                                     <i class="fas fa-globe tagged-link__icon icon--margin-right" />
                                     <span class="tagged-link__content">{{ $t('NavigationMenu.online') }}</span>
 
-                                <router-link :to="{name: 'downloads'}" class="margin-right--half-width">
-                                    <i class="tag fas fa-download is-primary" />
+                                    <router-link :to="{name: 'downloads'}" class="margin-right--half-width">
+                                        <i class="tag fas fa-download is-primary" />
+                                    </router-link>
+                                    <span :class="getTagLinkClasses(['manager.online', 'downloads'])">{{thunderstoreModCount}}</span>
                                 </router-link>
-                                <span :class="getTagLinkClasses(['manager.online', 'downloads'])">{{thunderstoreModCount}}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr/>
+                    <p class='menu-label'>{{ $t('NavigationMenu.other') }}</p>
+                    <ul class='menu-list'>
+                        <li>
+                            <router-link :to="{name: 'config-editor'}">
+                                <i class="fas fa-edit icon--margin-right" />
+                                {{ $t('NavigationMenu.config_editor') }}
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{name: 'manager.settings'}">
+                                <i class="fas fa-cog icon--margin-right" />
+                                {{ $t('NavigationMenu.settings') }}
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{name: 'help'}">
+                                <i class="fas fa-question-circle icon--margin-right" />
+                                {{ $t('NavigationMenu.help') }}
                             </router-link>
                         </li>
                     </ul>
+                    <slot></slot>
                 </div>
-                <hr/>
-                <p class='menu-label'>{{ $t('NavigationMenu.other') }}</p>
-                <ul class='menu-list'>
-                    <li>
-                        <router-link :to="{name: 'config-editor'}">
-                            <i class="fas fa-edit icon--margin-right" />
-                            {{ $t('NavigationMenu.config_editor') }}
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{name: 'manager.settings'}">
-                            <i class="fas fa-cog icon--margin-right" />
-                            {{ $t('NavigationMenu.settings') }}
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{name: 'help'}">
-                            <i class="fas fa-question-circle icon--margin-right" />
-                            {{ $t('NavigationMenu.help') }}
-                        </router-link>
-                    </li>
-                </ul>
-                <slot></slot>
-            </div>
-        </aside>
+            </aside>
+        </div>
     </div>
 </template>
 
