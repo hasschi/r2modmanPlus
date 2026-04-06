@@ -1,93 +1,95 @@
 <template>
     <div class="full-height">
-        <aside class="menu">
-            <div id="menu__top">
-                <p class="menu-label">{{ activeGame.displayName }}</p>
-                <div class="launch-control">
-                    <div class="launch-split">
-                        <button class="launch-split__start" @click="launchGame(selectedMode)">
-                            <i class="fas fa-play fa-fw" />
-                            <span>
-                                Start {{ selectedMode === LaunchMode.MODDED ? 'modded' : 'vanilla' }}
-                            </span>
-                        </button>
-                        <ActivityDropdown trigger="click" placement="bottom-end">
-                            <template #default="{ shown }">
-                                <button class="launch-split__mode">
-                                    <p>
-                                        <i :class="['fas', shown ? 'fa-caret-up' : 'fa-caret-down']" />
-                                    </p>
-                                </button>
-                            </template>
-                            <template #popper>
-                                <ul class="menu-list">
-                                    <li v-if="selectedMode === LaunchMode.VANILLA">
-                                        <a v-close-popper @click="selectedMode = LaunchMode.MODDED">
-                                            <i class="fas fa-play fa-fw" />
-                                            Start modded
-                                        </a>
-                                    </li>
-                                    <li v-else>
-                                        <a v-close-popper @click="selectedMode = LaunchMode.VANILLA">
-                                            <i class="fas fa-play fa-fw" />
-                                            Start vanilla
-                                        </a>
-                                    </li>
-                                </ul>
-                            </template>
-                        </ActivityDropdown>
+        <div class="sticky-top sticky-top--no-shadow sticky-top--no-padding">
+            <aside class="menu">
+                <div id="menu__top">
+                    <p class="menu-label">{{ activeGame.displayName }}</p>
+                    <div class="launch-control">
+                        <div class="launch-split">
+                            <button class="launch-split__start" @click="launchGame(selectedMode)">
+                                <i class="fas fa-play fa-fw" />
+                                <span>
+                                    {{ selectedMode === LaunchMode.MODDED ? $t('NavigationMenu.start_modded') : $t('NavigationMenu.start_vanilla') }}
+                                </span>
+                            </button>
+                            <ActivityDropdown trigger="click" placement="bottom-end">
+                                <template #default="{ shown }">
+                                    <button class="launch-split__mode">
+                                        <p>
+                                            <i :class="['fas', shown ? 'fa-caret-up' : 'fa-caret-down']" />
+                                        </p>
+                                    </button>
+                                </template>
+                                <template #popper>
+                                    <ul class="menu-list">
+                                        <li v-if="selectedMode === LaunchMode.VANILLA">
+                                            <a v-close-popper @click="selectedMode = LaunchMode.MODDED">
+                                                <i class="fas fa-play fa-fw" />
+                                                {{ $t('NavigationMenu.start_modded') }}
+                                            </a>
+                                        </li>
+                                        <li v-else>
+                                            <a v-close-popper @click="selectedMode = LaunchMode.VANILLA">
+                                                <i class="fas fa-play fa-fw" />
+                                                {{ $t('NavigationMenu.start_vanilla') }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </template>
+                            </ActivityDropdown>
+                        </div>
                     </div>
-                </div>
-                <hr/>
-                <p class="menu-label">Mods</p>
-                <div>
-                    <ul class="menu-list">
+                    <hr/>
+                    <p class="menu-label">{{ $t('NavigationMenu.mods') }}</p>
+                    <div>
+                        <ul class="menu-list">
+                            <li>
+                                <router-link :to="{name: 'manager.installed'}" class="tagged-link">
+                                    <i class="fas fa-folder tagged-link__icon icon--margin-right" />
+                                    <span class="tagged-link__content">{{ $t('NavigationMenu.installed') }}</span>
+                                    <span :class="getTagLinkClasses(['manager.installed', 'manager'])">{{localModCount}}</span>
+                                </router-link>
+                            </li>
+                            <li>
+                                <router-link :to="{name: 'manager.online'}"
+                                             :class="['tagged-link', {'is-active': $route.name === 'downloads'}]">
+                                    <i class="fas fa-globe tagged-link__icon icon--margin-right" />
+                                    <span class="tagged-link__content">{{ $t('NavigationMenu.online') }}</span>
+
+                                    <router-link :to="{name: 'downloads'}" class="margin-right--half-width">
+                                        <i class="tag fas fa-download is-primary" />
+                                    </router-link>
+                                    <span :class="getTagLinkClasses(['manager.online', 'downloads'])">{{thunderstoreModCount}}</span>
+                                </router-link>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr/>
+                    <p class='menu-label'>{{ $t('NavigationMenu.other') }}</p>
+                    <ul class='menu-list'>
                         <li>
-                            <router-link :to="{name: 'manager.installed'}" class="tagged-link">
-                                <i class="fas fa-folder tagged-link__icon icon--margin-right" />
-                                <span class="tagged-link__content">Installed</span>
-                                <span :class="getTagLinkClasses(['manager.installed', 'manager'])">{{localModCount}}</span>
+                            <router-link :to="{name: 'config-editor'}">
+                                <i class="fas fa-edit icon--margin-right" />
+                                {{ $t('NavigationMenu.config_editor') }}
                             </router-link>
                         </li>
                         <li>
-                            <router-link :to="{name: 'manager.online'}"
-                                         :class="['tagged-link', {'is-active': router.currentRoute.value.name === 'downloads'}]">
-                                <i class="fas fa-globe tagged-link__icon icon--margin-right" />
-                                <span class="tagged-link__content">Online</span>
-
-                                <router-link :to="{name: 'downloads'}" class="margin-right--half-width">
-                                    <i class="tag fas fa-download is-primary" />
-                                </router-link>
-                                <span :class="getTagLinkClasses(['manager.online', 'downloads'])">{{thunderstoreModCount}}</span>
+                            <router-link :to="{name: 'manager.settings'}">
+                                <i class="fas fa-cog icon--margin-right" />
+                                {{ $t('NavigationMenu.settings') }}
+                            </router-link>
+                        </li>
+                        <li>
+                            <router-link :to="{name: 'help'}">
+                                <i class="fas fa-question-circle icon--margin-right" />
+                                {{ $t('NavigationMenu.help') }}
                             </router-link>
                         </li>
                     </ul>
+                    <slot></slot>
                 </div>
-                <hr/>
-                <p class='menu-label'>Other</p>
-                <ul class='menu-list'>
-                    <li>
-                        <router-link :to="{name: 'config-editor'}">
-                            <i class="fas fa-edit icon--margin-right" />
-                            Config editor
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{name: 'manager.settings'}">
-                            <i class="fas fa-cog icon--margin-right" />
-                            Settings
-                        </router-link>
-                    </li>
-                    <li>
-                        <router-link :to="{name: 'help'}">
-                            <i class="fas fa-question-circle icon--margin-right" />
-                            Help
-                        </router-link>
-                    </li>
-                </ul>
-                <slot></slot>
-            </div>
-        </aside>
+            </aside>
+        </div>
     </div>
 </template>
 

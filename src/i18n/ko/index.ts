@@ -1,0 +1,650 @@
+export default {
+  "ExpandableCard": {
+    "mod_logo": "모드 로고",
+    "funky_mode": "펑키 모드"
+  },
+  "ModListUpdateBanner": {
+    "error_refreshing_the_mod_list": "모드 목록을 새로고침하는 중 오류가 발생했습니다.",
+    "view_error_details": "오류 세부 정보 보기",
+    "the_manager_will_keep_trying_t": "매니저가 백그라운드에서 모드 목록 새로고침을 계속 시도합니다.",
+    "an_error_occurred_when_refresh": "Thunderstore에서 모드 목록을 새로고침하는 중 오류가 발생했습니다.",
+    "however_the_mod_list_can_t_be": "모드 다운로드가 진행 중인 동안에는 모드 목록을 새로고침할 수 없습니다.",
+    "please_wait_for_the_downloads": "계속하기 전에 다운로드가 완료될 때까지 기다려 주세요.",
+    "an_error_occurred_when_refresh_1": "Thunderstore에서 모드 목록을 새로고침하는 중 오류가 발생했습니다. 다시 시도하시겠습니까?",
+    "try_again_now": "지금 다시 시도",
+    "would_you_like_to": "하시겠습니까?"
+  },
+  "OnlineRowCard": {
+    "mod_logo": "모드 로고"
+  },
+  "SettingsLoader": {
+    "error": "오류",
+    "suggestion": "권장 사항",
+    "this_is_a_problem_with_the_mod": "이것은 모드 매니저 자체의 문제입니다. 최신 버전이 있는 경우 설치해 보세요.",
+    "loading_of_local_user_settings": "로컬 사용자 설정을 불러오지 못했습니다. 아래 버튼을 사용하여 설정을 초기화할 수 있지만, 모든 게임의 모든 설정이 삭제되며 복구할 수 없다는 점에 유의하세요.",
+    "reset_settings": "설정 초기화",
+    "resetting_of_the_settings_fail": "설정 초기화에 실패했습니다. 다음 ",
+    "instructions": "안내",
+    "locally_stored_settings_were_r": "에 따라 수동으로 초기화를 시도해 볼 수 있습니다. 로컬 설정이 초기화되었으나 불러오기 문제가 해결되지 않았습니다. 최신 버전이 있는 경우 설치해 보세요."
+  },
+  "ManagerUpdateBanner": {
+    "an": "",
+    "update_is_available": "업데이트가 가능합니다.",
+    "click_here_to_go_to_the_releas": "릴리스 페이지로 이동하려면 여기를 클릭하세요."
+  },
+  "DonateButton": {
+    "donate": "기부"
+  },
+  "ConfigEntryEditor": {
+    "save": "저장",
+    "cancel": "취소",
+    "sections": "섹션",
+    "hidden": "숨김)",
+    "show_less": "간략히 보기",
+    "show_more": "더 보기",
+    "select_an_option": "옵션 선택"
+  },
+  "ConfigRawEditor": {
+    "save": "저장",
+    "cancel": "취소"
+  },
+  "ConfigSelectionLayout": {
+    "config_editor": "구성 에디터",
+    "configuration_files_are_genera": "구성 파일은 모드를 설치하고 게임을 한 번 이상 실행한 후에 생성됩니다.",
+    "search": "검색",
+    "search_for_config_files": "구성 파일 검색",
+    "sort": "정렬",
+    "edit_config": "구성 편집",
+    "open_file": "파일 열기",
+    "delete": "삭제",
+    "looking_for_config_files": "구성 파일 찾는 중"
+  },
+  "LocalFileImportModal": {
+    "import_mod_from_file": "파일에서 모드 가져오기",
+    "select_file": "파일 선택",
+    "import_local_mod": "로컬 모드 가져오기",
+    "please_select_a_zip_or_dll_to": "가져올 zip 또는 DLL 파일을 선택해 주세요.",
+    "zip_files_that_contain_a_manif": "manifest 파일이 포함된 zip 파일은 일부 정보가 자동으로 입력됩니다. manifest가 없는 경우 수동으로 입력해야 합니다.",
+    "waiting_for_file_this_may_take": "파일 대기 중. 1분 정도 걸릴 수 있습니다.",
+    "mod_name": "모드 이름",
+    "enter_the_name_of_the_mod": "모드 이름 입력",
+    "author": "제작자",
+    "enter_the_author_name": "제작자 이름 입력",
+    "description_optional": "설명 (선택 사항)",
+    "enter_a_description": "설명 입력",
+    "version": "버전",
+    "major": "메이저",
+    "minor": "마이너",
+    "patch": "패치"
+  },
+  "CategoryFilterModal": {
+    "filter_mod_categories": "모드 카테고리 필터",
+    "mods_must_contain_at_least_one": "다음 카테고리 중 하나 이상 포함",
+    "mods_must_contain_all_of_these": "다음 카테고리 모두 포함",
+    "mods_cannot_contain_any_of_the": "다음 카테고리 포함 안 함",
+    "allow_nsfw_potentially_explici": "성인용(NSFW) 모드 허용",
+    "show_deprecated_mods": "더 이상 지원되지 않는(Deprecated) 모드 표시",
+    "apply_filters": "필터 적용"
+  },
+  "CategorySelectorModal": {
+    "select_a_category": "카테고리 선택",
+    "no_categories_selected": "선택된 카테고리 없음"
+  },
+  "ErrorModal": {
+    "error": "오류",
+    "suggestion": "권장 사항"
+  },
+  "GameRunningModal": {
+    "is_launching_via_steam": "이 Steam을 통해 실행 중입니다",
+    "is_starting": "이 시작 중입니다",
+    "close_this_message_to_continue": "모드 관리를 계속하려면 이 메시지를 닫으세요.",
+    "if_this_is_taking_a_while_it_s": "시간이 오래 걸린다면 Steam이 시작 중이기 때문일 수 있습니다.",
+    "please_be_patient_and_have_fun": "잠시만 기다려 주시고 즐거운 시간 되세요!"
+  },
+  "ProfileCodeExportModal": {
+    "profile_exported": "프로필 내보내기 완료",
+    "your_code": "코드:",
+    "has_been_copied_to_your_clipbo": "가 클립보드에 복사되었습니다. 친구에게 공유해 보세요!",
+    "done": "완료"
+  },
+  "ProfileManagementModal": {
+    "profile": "프로필",
+    "close": "닫기",
+    "items": {
+      "change_profile": {
+        "action": "Change profile",
+        "description": "Return to the profile selection screen"
+      },
+      "export_file": {
+        "action": "Export profile as a file",
+        "description": "Export your mod list and configs as a file"
+      },
+      "export_code": {
+        "action": "Export profile as code",
+        "description": "Export your mod list and configs as a code"
+      },
+      "import_local": {
+        "action": "Import local mod",
+        "description": "Install a mod offline from your files",
+        "not_all_installable": "Not all mods can be installed locally"
+      }
+    }
+  },
+  "SortModal": {
+    "change_the_ordering_of_mods": "모드 정렬 순서 변경",
+    "sort_behaviour": "정렬 기준",
+    "sort_direction": "정렬 방향",
+    "close": "닫기"
+  },
+  "LaunchTypeModal": {
+    "set_launch_behaviour": "실행 방식 설정",
+    "auto": "자동",
+    "native": "네이티브",
+    "proton": "Proton",
+    "by_selecting": "을 선택하여 ",
+    "we_have_determined_that": "이 ",
+    "will_be_launched_under": " 모드로 실행되도록 설정되었습니다.",
+    "mode": "",
+    "we_were_unable_to_determine_if": "필요한 래퍼 인수가 설정되었는지 확인할 수 없습니다.",
+    "if_you_have_not_yet_done_this": "수동으로 설정하지 않은 경우 Steam의 게임 속성에 다음 실행 인수를 추가해 주세요:",
+    "copy_launch_arguments": "실행 인수 복사",
+    "update": "업데이트"
+  },
+  "NavigationMenu": {
+    "start_modded": "모드 적용 시작",
+    "start_vanilla": "바닐라 시작",
+    "mods": "모드",
+    "installed": "설치됨",
+    "online": "온라인",
+    "other": "기타",
+    "config_editor": "구성 에디터",
+    "settings": "설정",
+    "help": "도움말",
+    "game_icon": "게임 아이콘",
+    "profile": "프로필"
+  },
+  "CreateProfileModal": {
+    "create_a_profile": "프로필 생성",
+    "this_profile_will_store_its_ow": "이 프로필은 다른 프로필과 독립적으로 모드를 저장합니다.",
+    "profile_name_required": "프로필 이름이 필요합니다",
+    "is_available": "\" 사용 가능",
+    "is_either_already_in_use_or_c": "\" 이미 사용 중이거나 유효하지 않은 문자가 포함됨",
+    "create": "생성"
+  },
+  "DeleteProfileModal": {
+    "delete_profile": "프로필 삭제",
+    "this_will_remove_all_mods_and": "이 프로필에 설치된 모든 모드와 구성 파일이 삭제됩니다.",
+    "if_this_was_an_accident_click": "실수로 클릭했다면 어두운 영역이나 우측 상단의 X를 클릭하세요.",
+    "are_you_sure_you_d_like_to_del": "정말로 이 프로필을 삭제하시겠습니까?"
+  },
+  "ImportProfileModal": {
+    "how_are_you_importing_a_profil": "프로필을 어떻게 가져오시겠습니까?",
+    "how_are_you_updating_your_prof": "프로필을 어떻게 업데이트하시겠습니까?",
+    "from_file": "파일에서",
+    "from_code": "코드에서",
+    "loading_file": "파일 불러오는 중",
+    "a_file_selection_window_will_a": "파일 선택 창이 나타납니다. 선택 후 잠시 시간이 걸릴 수 있습니다.",
+    "enter_the_profile_code": "프로필 코드 입력",
+    "invalid_code_check_for_typos": "잘못된 코드입니다. 오타를 확인해 주세요",
+    "refreshing_online_mod_list": "온라인 모드 목록 새로고침 중",
+    "some_of_the_packages_in_the_pr": "일부 패키지가 인식되지 않습니다. 새로고침으로 해결될 수 있습니다. 잠시만 기다려 주세요...",
+    "waiting_for_mod_downloads_to_f": "목록 새로고침 전에 모드 다운로드 완료를 기다리는 중...",
+    "packages_to_be_installed": "설치될 패키지",
+    "these_packages_in_the_profile": "다음 패키지는 Thunderstore에서 찾을 수 없어 설치되지 않습니다:",
+    "ensure_the_profile_is_intended": "프로필이 현재 선택한 게임용인지 확인해 주세요.",
+    "these_packages_will_be_install": "다음 패키지가 설치됩니다:",
+    "i_understand_that_some_of_the": "일부 모드가 누락될 수 있음을 이해했습니다",
+    "import": "가져오기",
+    "are_you_going_to_be_updating_a": "기존 프로필을 업데이트하시겠습니까, 아니면 새로 만드시겠습니까?",
+    "import_new_profile": "새 프로필로 가져오기",
+    "update_existing_profile": "기존 프로필 업데이트",
+    "import_a_profile": "프로필 가져오기",
+    "this_profile_will_store_its_ow": "이 프로필은 다른 프로필과 독립적으로 모드를 저장합니다.",
+    "profile_name_required": "프로필 이름이 필요합니다",
+    "is_available": "\" 사용 가능",
+    "is_either_already_in_use_or_c": "\" 이미 사용 중이거나 유효하지 않은 문자가 포함됨",
+    "all_contents_of_the_profile_wi": "코드/파일의 내용으로 프로필의 모든 내용이 덮어씌워집니다.",
+    "select_a_profile_below": "아래에서 프로필을 선택해 주세요:",
+    "create": "생성",
+    "update_profile": "프로필 업데이트:",
+    "this_may_take_a_while_as_files": "다운로드, 압축 해제, 복사 작업으로 인해 시간이 걸릴 수 있습니다.",
+    "please_do_not_close": "닫지 마세요"
+  },
+  "RenameProfileModal": {
+    "rename_a_profile": "프로필 이름 변경",
+    "this_profile_will_store_its_ow": "이 프로필은 다른 프로필과 독립적으로 모드를 저장합니다.",
+    "profile_name_required": "프로필 이름이 필요합니다",
+    "is_available": "\" 사용 가능",
+    "is_either_already_in_use_or_c": "\" 이미 사용 중이거나 유효하지 않은 문자가 포함됨",
+    "rename": "이름 변경"
+  },
+  "SettingsView": {
+    "settings": "설정",
+    "search": "검색:",
+    "search_for_a_setting": "설정 검색",
+    "tabs": {
+      "all": "All",
+      "profile": "Profile",
+      "locations": "Locations",
+      "debugging": "Debugging",
+      "modpacks": "Modpacks",
+      "other": "Other"
+    },
+    "items": {
+      "browse_data_folder": {
+        "action": "Browse data folder",
+        "description": "Open the folder where mods are stored for all games and profiles."
+      },
+      "change_game_folder": {
+        "action": "Change {game} folder",
+        "description": "Change the location of the {game} folder that {app} uses.",
+        "please_set_manually": "Please set manually"
+      },
+      "browse_profile_folder": {
+        "action": "Browse profile folder",
+        "description": "Open the folder where mods are stored for the current profile."
+      },
+      "change_data_folder": {
+        "action": "Change data folder",
+        "description": "Change the folder where mods are stored for all games and profiles. The folder will not be deleted, and existing profiles will not carry across."
+      },
+      "copy_log_to_clipboard": {
+        "action": "Copy log file contents to clipboard",
+        "description": "Copy the text inside the LogOutput.log file to the clipboard, with Discord formatting.",
+        "exists": "Log file exists",
+        "not_exists": "Log file does not exist"
+      },
+      "copy_troubleshooting_info": {
+        "action": "Copy troubleshooting information to clipboard",
+        "description": "Copy settings and other information to the clipboard, with Discord formatting.",
+        "share_info": "Share this information when requesting support on Discord."
+      },
+      "toggle_download_cache": {
+        "action": "Toggle download cache",
+        "description": "Downloading a mod will ignore mods stored in the cache. Mods will still be placed in the cache.",
+        "enabled": "Current: cache is enabled (recommended)",
+        "disabled": "Current: cache is disabled"
+      },
+      "set_launch_parameters": {
+        "action": "Set launch parameters",
+        "description": "Provide custom arguments used to start the game.",
+        "steam_exec": "These commands are used against the Steam executable on game startup"
+      },
+      "clean_mod_cache": {
+        "action": "Clean mod cache",
+        "description": "Free extra space caused by cached mods that are not currently in a profile.",
+        "check_profiles": "Check all profiles for unused mods and clear cache"
+      },
+      "clean_online_mod_list": {
+        "action": "Clean online mod list",
+        "description": "Deletes local copy of mod list, forcing the next refresh to fetch a new one."
+      },
+      "toggle_thunderstore_cdn": {
+        "action": "Toggle preferred Thunderstore CDN",
+        "description": "Switch the CDN until app is restarted. This might bypass issues with downloading mods.",
+        "current": "Current: {label} ({url})"
+      },
+      "change_profile": {
+        "action": "Change profile",
+        "description": "Change the mod profile.",
+        "current": "Current profile: {name}"
+      },
+      "enable_all_mods": {
+        "action": "Enable all mods",
+        "description": "Enable all mods for the current profile",
+        "status": "{enabled}/{total} enabled"
+      },
+      "disable_all_mods": {
+        "action": "Disable all mods",
+        "description": "Disable all mods for the current profile",
+        "status": "{disabled}/{total} disabled"
+      },
+      "import_local_mod": {
+        "action": "Import local mod",
+        "description": "Install a mod offline from your files.",
+        "not_all_installable": "Not all mods can be installed locally"
+      },
+      "export_profile_file": {
+        "action": "Export profile as a file",
+        "description": "Export your mod list and configs as a file.",
+        "share_easily": "The exported file can be shared with friends to get an identical profile quickly and easily"
+      },
+      "export_profile_code": {
+        "action": "Export profile as a code",
+        "description": "Export your mod list and configs as a code.",
+        "share_easily": "The exported code can be shared with friends to get an identical profile quickly and easily"
+      },
+      "update_all_mods": {
+        "action": "Update all mods",
+        "description": "Quickly update every installed mod to their latest versions.",
+        "one_update": "1 mod has an update available",
+        "multi_updates": "{count} mods have an update available"
+      },
+      "funky_mode": {
+        "action": "Toggle funky mode",
+        "description": "Enable/disable funky mode.",
+        "enabled": "Current: enabled",
+        "disabled": "Current: disabled (default)"
+      },
+      "switch_theme": {
+        "action": "Switch theme",
+        "description": "Switch between light and dark themes.",
+        "dark": "Current: dark theme",
+        "light": "Current: light theme (default)"
+      },
+      "switch_card_type": {
+        "action": "Switch card display type",
+        "description": "Switch between expanded or collapsed cards.",
+        "expanded": "Current: expanded",
+        "collapsed": "Current: collapsed (default)"
+      },
+      "refresh_online_mod_list": {
+        "action": "Refresh online mod list",
+        "description": "Check for any new mod releases.",
+        "refreshing": "Refreshing...",
+        "error": "Error refreshing the mod list: {error}",
+        "disabled_downloads": "Refreshing the mod list is disabled while there are active downloads.",
+        "cache_date": "Cache date: {date}",
+        "no_api": "No API information available"
+      },
+      "change_game": {
+        "action": "Change game",
+        "description": "Change the current game"
+      },
+      "show_dependency_strings": {
+        "action": "Show dependency strings",
+        "description": "View a list of installed mods with their version strings. Used inside the dependencies array inside the manifest.json file.",
+        "status": "Show dependency strings for {count} mod(s)"
+      },
+      "change_steam_folder": {
+        "action": "Change Steam folder",
+        "description": "Change the location of the Steam folder that {app} uses.",
+        "please_set_manually": "Please set manually"
+      },
+      "reset_installation": {
+        "action": "Reset {game} installation",
+        "description": "Fix problems caused by corrupted files or files left over from manual modding attempts.",
+        "status": "This will delete all contents of the {folder} folder, and verify the files through Steam"
+      },
+      "change_launch_behaviour": {
+        "action": "Change launch behaviour",
+        "description": "Select specific launch behaviour such as forcing Steam to launch with Proton",
+        "current": "The current launch behaviour is set to: {type}"
+      }
+    }
+  },
+  "OnlinePreviewPanel": {
+    "by": "제작:",
+    "package_information": "패키지 정보",
+    "this_mod_may_contain_potential": "이 모드는 성인용 콘텐츠를 포함할 수 있습니다",
+    "downloads": "다운로드:",
+    "likes": "좋아요:",
+    "last_updated": "최근 업데이트:",
+    "categories": "카테고리:",
+    "download": "다운로드",
+    "view_online": "웹에서 보기",
+    "donate": "기부",
+    "readme": "README",
+    "changelog": "변경 이력",
+    "dependencies": "의존성 (",
+    "fetching": "불러오는 중",
+    "for": ": ",
+    "has_no_dependencies": "의존성 없음",
+    "unable_to_fetch_readme_for": "README를 불러올 수 없습니다:",
+    "unable_to_fetch_changelog_for": "변경 이력을 불러올 수 없습니다:"
+  },
+  "DownloadModVersionSelectModal": {
+    "select_a_version_of": "의 버전 선택",
+    "to_download": "다운로드",
+    "it_s_recommended_to_select_the": "모든 모드에 대해 최신 버전을 선택하는 것이 권장됩니다.",
+    "using_outdated_versions_may_ca": "오래된 버전을 사용하면 문제가 발생할 수 있습니다.",
+    "you_need_to_select_a_version": "버전을 선택해야 합니다",
+    "is_the_recommended_version": "권장 버전입니다",
+    "is_the_latest_version": "최신 버전입니다",
+    "is_an_outdated_version": "오래된 버전입니다",
+    "download_with_dependencies": "의존성 포함 다운로드"
+  },
+  "DownloadProgressModal": {
+    "downloading": "다운로드 중",
+    "installing": "설치 중",
+    "downloading_1": "다운로드 중:",
+    "of": "% 완료 / ",
+    "extracting": "압축 해제 중:",
+    "download_complete": "다운로드 완료",
+    "installing_1": "설치 중:",
+    "installing_waiting_for_downloa": "설치 중: 다운로드 완료 대기",
+    "waiting_for_download_to_finis": ": 다운로드 완료 대기"
+  },
+  "InstalledModView": {
+    "looks_like_you_don_t_have_any": "설치된 모드가 없는 것 같습니다",
+    "click_the_online_tab_on_the_le": "왼쪽의 온라인 탭을 클릭하거나 ",
+    "here": "여기",
+    "you_have": "현재 ",
+    "available_mod_update": "개의 모드 업데이트가 있습니다",
+    "would_you_like_to": ". 모두 ",
+    "update_all": "업데이트하시겠습니까?"
+  },
+  "AssociatedModsModal": {
+    "mods_associated_with": "관련 모드:",
+    "dependencies": "의존성",
+    "dependants": "피의존성",
+    "this_mod_has_no_dependencies_o": "이 모드는 의존성이나 피의존성이 없습니다.",
+    "done": "완료"
+  },
+  "DisableModModal": {
+    "disabling": "비활성화 중",
+    "other_mods_depend_on_this_mod": "다른 모드가 이 모드에 의존하고 있습니다.",
+    "disable_all": "모두 비활성화",
+    "to_disable_dependent_mods_othe": "를 선택하여 관련 모드도 비활성화하세요. 그렇지 않으면 오류가 발생할 수 있습니다.",
+    "mods_to_be_disabled": "비활성화될 모드",
+    "disable_all_recommended": "모두 비활성화 (권장)",
+    "disable": "비활성화",
+    "only": "단독"
+  },
+  "LocalModCard": {
+    "deprecated": "지원 중단됨",
+    "disabled": "비활성화됨",
+    "by": "제작:",
+    "installed_on": "설치일:",
+    "uninstall": "제거",
+    "disable": "비활성화",
+    "enable": "활성화",
+    "associated": "관련",
+    "website": "웹사이트",
+    "update": "업데이트",
+    "download_dependency": "의존성 다운로드"
+  },
+  "SearchAndSort": {
+    "search": "검색",
+    "search_for_an_installed_mod": "설치된 모드 검색",
+    "sort": "정렬",
+    "disabled": "비활성화됨"
+  },
+  "SkeletonLocalModCard": {
+    "disabled": "비활성화됨",
+    "by": "제작:"
+  },
+  "UninstallModModal": {
+    "uninstalling": "제거 중",
+    "other_mods_depend_on_this_mod": "다른 모드가 이 모드에 의존하고 있습니다.",
+    "uninstall_all": "모두 제거",
+    "to_uninstall_dependent_mods_ot": "를 선택하여 관련 모드도 제거하세요. 그렇지 않으면 오류가 발생할 수 있습니다.",
+    "mods_to_be_uninstalled": "제거될 모드",
+    "uninstall_all_recommended": "모두 제거 (권장)",
+    "uninstall": "제거",
+    "only": "단독"
+  },
+  "OnlineModList": {
+    "pinned": "고정됨",
+    "by": "제작:",
+    "deprecated": "지원 중단됨",
+    "last_updated": "최근 업데이트:",
+    "categories": "카테고리:",
+    "download": "다운로드",
+    "website": "웹사이트"
+  },
+  "OnlineModView": {
+    "search": "검색",
+    "sort": "정렬",
+    "filter": "필터",
+    "use_the_numbers_below_to_chang": "아래 숫자를 사용하여 페이지 변경"
+  },
+  "UpdateAllInstalledModsModal": {
+    "no_mods_to_update": "업데이트할 모드 없음",
+    "either_all_installed_mods_are": "모든 모드가 최신 버전이거나 설치된 모드가 없습니다.",
+    "close": "닫기",
+    "update_all_installed_mods": "모든 설치된 모드 업데이트",
+    "all_installed_mods_will_be_upd": "모든 설치된 모드가 최신 버전으로 업데이트됩니다.",
+    "any_missing_dependencies_will": "누락된 의존성도 함께 설치됩니다.",
+    "the_following_mods_will_be_dow": "다음 모드가 다운로드 및 설치됩니다:",
+    "will_be_updated_to": "가 다음으로 업데이트됩니다:",
+    "update_all": "모두 업데이트"
+  },
+  "DownloadMonitor": {
+    "downloads": "다운로드",
+    "you_don_t_have_anything_downlo": "다운로드 중인 항목이 없습니다.",
+    "click": "",
+    "here": "여기",
+    "to_download_something": "를 클릭하여 다운로드를 시작하세요.",
+    "clear_finished": "완료된 항목 지우기",
+    "download_failed": "다운로드 실패",
+    "download_complete": "다운로드 완료",
+    "downloading": "다운로드 중:",
+    "extracting": "압축 해제 중:",
+    "of": "% 완료 / ",
+    "installing": "설치 중:",
+    "waiting_for_download_to_finish": "다운로드 완료 대기 중",
+    "100_of": "100% 완료 / ",
+    "complete": "% 완료"
+  },
+  "Error404": {
+    "sorry_nothing_here": "죄송합니다, 찾으시는 내용이 없습니다...",
+    "go_back": "뒤로 가기"
+  },
+  "GameSelectionScreen": {
+    "which_store_manages_your_game": "어떤 스토어에서 게임을 관리하시나요?",
+    "select_platform": "플랫폼 선택",
+    "an_update_to_the_manager_has_o": "매니저 업데이트가 있어 백그라운드 작업이 필요합니다.",
+    "the_options_to_select_a_game_a": "작업이 완료될 때까지 게임 선택 옵션이 비활성화됩니다.",
+    "search_for_a_game": "게임 검색",
+    "select": "선택",
+    "set_as_default": "기본값으로 설정",
+    "mod_logo": "모드 로고"
+  },
+  "Help": {
+    "help": "도움말",
+    "getting_started_with_installin": "모드 설치 시작하기",
+    "go_to_the_online_tab_find_a_mo": "온라인 탭으로 이동하여 모드를 찾고 다운로드를 누르세요. 의존성도 자동으로 함께 다운로드됩니다.",
+    "once_you_ve_installed_the_mods": "모드 설치 후 왼쪽 상단의",
+    "start_modded": "모드 적용 시작",
+    "in_the_top_left": "을 클릭하세요.",
+    "slow_game_with_mods_stuttering": "모드 적용 후 게임이 느려지거나 끊기나요?",
+    "this_is_likely_due_to_a_mod_th": "오류를 발생시키는 모드가 있을 가능성이 높습니다. 절반씩 비활성화하며 원인을 찾아보세요.",
+    "if_the_issue_still_remains_the": "문제가 해결될 때까지 반복하세요.",
+    "in_the_case_of_stuttering_ther": "끊김 현상의 경우 최적화 모드가 도움이 될 수 있습니다.",
+    "dedicated_servers": "전용 서버",
+    "dedicated_servers_aren_t_direc": "매니저는 전용 서버를 직접 지원하지 않으나, 프로필 내용을 서버 폴더로 직접 복사하여 사용할 수 있습니다.",
+    "launching_the_game_from_outsid": "매니저 외부에서 게임 실행",
+    "by_design_your_experience_by_s": "Steam을 통해 실행하면 기본적으로 바닐라(순정) 상태로 실행됩니다.",
+    "you_will_need_to_place_the_cor": "모드를 적용하려면 플랫폼의 실행 인수에 해당 값을 넣어야 합니다.",
+    "for_steam_this_would_be_locate": "Steam의 경우 게임 속성에서 설정할 수 있습니다.",
+    "your_current_argument_would_be": "현재 인수는 다음과 같습니다:",
+    "these_parameters_will_be_avail": "이 파라미터들은 BepInEx 설치 후에 사용 가능합니다.",
+    "copy_launch_arguments": "실행 인수 복사",
+    "a_red_box_appears_when_i_try_t": "게임 시작 시 빨간 상자가 나타납니다",
+    "read_the_suggestion_at_the_bot": "상자 하단의 권장 사항을 읽어보세요.",
+    "i_m_taken_to_the_steam_store_p": "Steam 상점 페이지로 이동됩니다",
+    "that_s_because_you_don_t_legal": "게임 정품을 소유하고 있지 않기 때문입니다. 매니저는 정품만 지원합니다.",
+    "a_text_window_appears_and_clos": "텍스트 창이 나타났다가 바로 닫힙니다",
+    "try_running_reset": "설정 화면에서 '설치 초기화",
+    "installation_on_the_settings_s": "'를 시도해 보세요.",
+    "if_it_persists_force_exit_stea": "문제가 지속되면 Steam을 강제 종료하고 다시 시도하세요.",
+    "potential_solutions": "잠재적 해결책",
+    "the_most_common_issues_are_sol": "일반적인 문제들은 다음 안내를 따르면 해결됩니다:",
+    "here": "여기",
+    "auto_updates": "자동 업데이트",
+    "the_manager_updates_automatica": "매니저는 종료 시 업데이트가 있으면 자동으로 업데이트됩니다.",
+    "updates_are_downloaded_in_the": "업데이트는 백그라운드에서 다운로드됩니다.",
+    "you_may_receive_a_prompt_to_ru": "관리자 권한으로 실행하라는 창이 뜰 수 있습니다:",
+    "old_uninstaller": "old_uninstaller",
+    "as_an_admin_this_is_the_update": ". 이것이 업데이트 프로그램입니다.",
+    "if_a_problem_occurs_with_an_up": "업데이트에 문제가 있으면 최신 설치 프로그램을 직접 실행하세요.",
+    "i_don_t_want_updates": "업데이트를 원하지 않습니다",
+    "on_github_there_is_a_portable": "GitHub에 자동 업데이트가 없는 포터블 버전이 있습니다. 하지만 업데이트 알림은 표시됩니다.",
+    "aren_t_directly_supported_thro": "직접 지원되지 않으나 수동 복사로 가능합니다."
+  },
+  "LinuxNativeGameSetup": {
+    "it_looks_like_you_ve_previousl": "이전에 실행 인수를 설정하신 적이 있는 것 같습니다.",
+    "the_flatpak_version_of": "Flatpak 버전의",
+    "now_uses_a_different_wrapper_s": "은 현재 다른 래퍼 스크립트를 사용합니다.",
+    "you_must_update_your_launch_ar": "이를 위해 실행 인수를 업데이트해야 합니다.",
+    "to_be_able_to_launch": "Linux에서 ",
+    "on_linux_you_must_first_setup": "을 실행하려면 Steam 실행 옵션을 먼저 올바르게 설정해야 합니다.",
+    "this_needs_to_be_done_because": "이는 Unix 시스템에서 BepInEx 인젝션 방식 때문입니다.",
+    "please_copy_and_paste_the_foll": "다음을 복사하여 ",
+    "launch_options": "실행 옵션에 붙여넣으세요:",
+    "copy_to_clipboard": "클립보드에 복사",
+    "continue": "계속"
+  },
+  "Manager": {
+    "failed_to_set_the_steam_folder": "Steam 폴더 설정 실패",
+    "the_steam_executable_was_not_s": "Steam 실행 파일이 선택되지 않았습니다.",
+    "if_this_error_has_appeared_but": "경로가 맞는데도 오류가 나면 관리자 권한으로 실행해 보세요.",
+    "failed_to_set_the": " 설정 실패: ",
+    "folder": "폴더",
+    "the_executable_must_be_either": "실행 파일은 다음 중 하나여야 합니다: \"",
+    "clearing_the": "삭제 중: ",
+    "installation_directory": "설치 디렉토리",
+    "you_will_not_not_be_able_to_la": "Steam에서 게임 파일 무결성 검사를 할 때까지 게임을 실행할 수 없습니다.",
+    "steam_will_be_started_and_will": "Steam이 실행되어 무결성 검사를 시도합니다:",
+    "please_check_the_steam_window": "Steam 창에서 진행 상황을 확인하세요. 창이 뜨지 않으면 잠시 기다려 주세요.",
+    "i_understand": "이해했습니다",
+    "dependency_string_list": "의존성 문자열 목록",
+    "close": "닫기",
+    "set_custom_launch_parameters": "사용자 정의 실행 인수 설정",
+    "some_arguments_are_provided_by": "일부 인수는 기본으로 제공됩니다:",
+    "modded": "모드 적용:",
+    "these_parameters_will_be_avail": "이 인수들은 모드 로더 설치 후에 사용 가능합니다.",
+    "vanilla": "바닐라:",
+    "please_note_that_these_are_cal": "이들은 Steam 실행 파일에 대해 호출됩니다. 신중하게 입력해 주세요.",
+    "enter_parameters": "인수 입력",
+    "update_launch_parameters": "실행 인수 업데이트"
+  },
+  "Profiles": {
+    "profile_selection": "프로필 선택",
+    "back_to_game_selection": "게임 선택으로 돌아가기",
+    "select_profile": "프로필 선택",
+    "rename": "이름 변경",
+    "create_new": "새로 만들기",
+    "import_update": "가져오기 / 업데이트",
+    "delete": "삭제"
+  },
+  "Splash": {
+    "game_updates_may_break_mods_if": "게임 업데이트로 모드가 깨질 수 있습니다. 새 업데이트 직후에는 잠시 기다려 주세요.",
+    "help": "도움말",
+    "about": "정보",
+    "faq": "FAQ",
+    "go_back": "뒤로 가기",
+    "did_you_know": "알고 계셨나요?",
+    "you_can_use_the_install_with_m": "다음 사이트의 'Install with Mod Manager' 버튼을 사용할 수 있습니다:",
+    "thunderstore": "Thunderstore",
+    "with_r2modman": "r2modman으로 열립니다.",
+    "you_can_export_the_selected_pr": "설정 화면에서 프로필을 파일이나 코드로 내보낼 수 있습니다. 친구에게 모드 리스트를 공유하기 좋습니다!",
+    "having_trouble": "문제가 있나요?",
+    "send_a_screenshot_of_the_error": "Discord 서버에 오류 스크린샷을 보내주세요. 해결되지 않으면 저를 호출해 주세요.",
+    "about_r2modman": "r2modman 정보",
+    "it_s_created_by_ebkr_using_qua": "Ebkr가 Quasar를 사용하여 만들었습니다.",
+    "quasar_provides_the_following": "Quasar는 다음 도구들을 제공합니다:",
+    "electron": "Electron",
+    "node": "Node",
+    "vue": "Vue",
+    "typescript": "TypeScript",
+    "how_do_i_get_started": "어떻게 시작하나요?",
+    "head_on_over_to_the_online_tab": "온라인 탭에서 BepInEx 등을 다운로드하세요.",
+    "starting_the_game_with_mods": "모드로 게임 시작",
+    "you_have_to_start_the_game_fro": "매니저 내에서 게임을 시작해야 합니다. Steam에서 직접 시작하면 작동하지 않습니다.",
+    "modding_discord_server_feel_fr": "Discord 서버에 문의해 주세요.",
+    "send_a_screenshot_of_the_error_1": "오류 스샷을 보내주세요: ",
+    "r2modman": "r2modman"
+  }
+};

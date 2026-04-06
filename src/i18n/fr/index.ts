@@ -1,0 +1,651 @@
+export default {
+  "ExpandableCard": {
+    "mod_logo": "Logo du Mod",
+    "funky_mode": "Mode funky"
+  },
+  "ModListUpdateBanner": {
+    "error_refreshing_the_mod_list": "Erreur lors de l'actualisation de la liste des mods.",
+    "view_error_details": "Voir les détails de l'erreur",
+    "the_manager_will_keep_trying_t": "Le gestionnaire continuera d'essayer d'actualiser la liste en arrière-plan.",
+    "an_error_occurred_when_refresh": "Une erreur est survenue lors de l'actualisation depuis Thunderstore.",
+    "however_the_mod_list_can_t_be": "La liste ne peut pas être actualisée pendant des téléchargements.",
+    "please_wait_for_the_downloads": "Veuillez attendre la fin des téléchargements.",
+    "an_error_occurred_when_refresh_1": "Erreur lors de l'actualisation depuis Thunderstore. Voulez-vous",
+    "try_again_now": "réessayer maintenant",
+    "would_you_like_to": "Voulez-vous"
+  },
+  "OnlineRowCard": {
+    "mod_logo": "Logo du Mod"
+  },
+  "SettingsLoader": {
+    "error": "Erreur",
+    "suggestion": "Suggestion",
+    "this_is_a_problem_with_the_mod": "C'est un problème avec le gestionnaire lui-même. Si une version plus récente existe, installez-la.",
+    "loading_of_local_user_settings": "Échec du chargement des paramètres. Vous pouvez les réinitialiser, mais tous les réglages seront perdus.",
+    "reset_settings": "Réinitialiser les paramètres",
+    "resetting_of_the_settings_fail": "Échec de la réinitialisation. Vous pouvez essayer manuellement via ces",
+    "instructions": "instructions.",
+    "locally_stored_settings_were_r": "Paramètres réinitialisés, mais le problème persiste. Vérifiez si une mise à jour est disponible."
+  },
+  "ManagerUpdateBanner": {
+    "an": "Une",
+    "update_is_available": "mise à jour est disponible.",
+    "click_here_to_go_to_the_releas": "Cliquez ici pour voir la page de sortie."
+  },
+  "DonateButton": {
+    "donate": "Faire un don"
+  },
+  "ConfigEntryEditor": {
+    "save": "Enregistrer",
+    "cancel": "Annuler",
+    "sections": "Sections",
+    "hidden": "caché)",
+    "show_less": "Voir moins",
+    "show_more": "Voir plus",
+    "select_an_option": "Choisir une option"
+  },
+  "ConfigRawEditor": {
+    "save": "Enregistrer",
+    "cancel": "Annuler"
+  },
+  "ConfigSelectionLayout": {
+    "config_editor": "Éditeur de config",
+    "configuration_files_are_genera": "Les fichiers sont générés après avoir lancé le jeu avec le mod installé au moins une fois.",
+    "search": "Rechercher",
+    "search_for_config_files": "Rechercher des fichiers config",
+    "sort": "Trier",
+    "edit_config": "Modifier la config",
+    "open_file": "Ouvrir le fichier",
+    "delete": "Supprimer",
+    "looking_for_config_files": "Recherche des fichiers config"
+  },
+  "LocalFileImportModal": {
+    "import_mod_from_file": "Importer un mod depuis un fichier",
+    "select_file": "Choisir un fichier",
+    "import_local_mod": "Importer un mod local",
+    "please_select_a_zip_or_dll_to": "Sélectionnez un zip ou une DLL à importer.",
+    "zip_files_that_contain_a_manif": "Les zips avec manifeste auront des infos pré-remplies. Sinon, il faudra les saisir manuellement.",
+    "waiting_for_file_this_may_take": "Attente du fichier. Cela peut prendre une minute.",
+    "mod_name": "Nom du mod",
+    "enter_the_name_of_the_mod": "Entrez le nom du mod",
+    "author": "Auteur",
+    "enter_the_author_name": "Entrez le nom de l'auteur",
+    "description_optional": "Description (optionnel)",
+    "enter_a_description": "Entrez une description",
+    "version": "Version",
+    "major": "Majeur",
+    "minor": "Mineur",
+    "patch": "Correctif"
+  },
+  "CategoryFilterModal": {
+    "filter_mod_categories": "Filtrer les catégories de mods",
+    "mods_must_contain_at_least_one": "Doivent contenir au moins une de celles-ci",
+    "mods_must_contain_all_of_these": "Doivent contenir toutes celles-ci",
+    "mods_cannot_contain_any_of_the": "Ne doivent contenir aucune de celles-ci",
+    "allow_nsfw_potentially_explici": "Autoriser les mods NSFW (contenu explicite)",
+    "show_deprecated_mods": "Afficher les mods obsolètes",
+    "apply_filters": "Appliquer les filtres"
+  },
+  "CategorySelectorModal": {
+    "select_a_category": "Choisir une catégorie",
+    "no_categories_selected": "Aucune catégorie choisie"
+  },
+  "ErrorModal": {
+    "error": "Erreur",
+    "suggestion": "Suggestion"
+  },
+  "GameRunningModal": {
+    "is_launching_via_steam": "se lance via Steam",
+    "is_starting": "démarre",
+    "close_this_message_to_continue": "Fermez ce message pour continuer à modder.",
+    "if_this_is_taking_a_while_it_s": "Si c'est long, c'est probablement dû au lancement de Steam.",
+    "please_be_patient_and_have_fun": "Soyez patient et amusez-vous bien !"
+  },
+  "ProfileCodeExportModal": {
+    "profile_exported": "Profil exporté",
+    "your_code": "Votre code :",
+    "has_been_copied_to_your_clipbo": "a été copié. Donnez-le à un ami !",
+    "done": "Terminé"
+  },
+  "ProfileManagementModal": {
+    "profile": "Profil",
+    "close": "Fermer",
+    "items": {
+      "change_profile": {
+        "action": "Changer de profil",
+        "description": "Retourner à l'écran de sélection de profil"
+      },
+      "export_file": {
+        "action": "Exporter le profil en tant que fichier",
+        "description": "Exporter votre liste de mods et vos configurations dans un fichier"
+      },
+      "export_code": {
+        "action": "Exporter le profil en tant que code",
+        "description": "Exporter votre liste de mods et vos configurations sous forme de code"
+      },
+      "import_local": {
+        "action": "Importer un mod local",
+        "description": "Installer un mod hors ligne à partir de vos fichiers",
+        "not_all_installable": "Tous les mods ne peuvent pas être installés localement"
+      }
+    }
+  },
+  "SortModal": {
+    "change_the_ordering_of_mods": "Changer l'ordre des mods",
+    "sort_behaviour": "Type de tri",
+    "sort_direction": "Direction du tri",
+    "close": "Fermer"
+  },
+  "LaunchTypeModal": {
+    "set_launch_behaviour": "Régler le comportement de lancement",
+    "auto": "Auto",
+    "native": "Natif",
+    "proton": "Proton",
+    "by_selecting": "En choisissant",
+    "we_have_determined_that": "nous avons déterminé que",
+    "will_be_launched_under": "sera lancé en mode",
+    "mode": ".",
+    "we_were_unable_to_determine_if": "Impossible de vérifier si les arguments requis sont configurés.",
+    "if_you_have_not_yet_done_this": "Si ce n'est pas fait, ajoutez ces arguments dans les propriétés Steam du jeu :",
+    "copy_launch_arguments": "Copier les arguments",
+    "update": "Mettre à jour"
+  },
+  "NavigationMenu": {
+    "start_modded": "Lancer avec mods",
+    "start_vanilla": "Lancer sans mods",
+    "mods": "Mods",
+    "installed": "Installés",
+    "online": "En ligne",
+    "other": "Autre",
+    "config_editor": "Éditeur de config",
+    "settings": "Paramètres",
+    "help": "Aide",
+    "game_icon": "Icône du jeu",
+    "profile": "Profil"
+  },
+  "CreateProfileModal": {
+    "create_a_profile": "Créer un profil",
+    "this_profile_will_store_its_ow": "Ce profil stockera ses propres mods séparément.",
+    "profile_name_required": "Nom du profil requis",
+    "is_available": "\" est disponible",
+    "is_either_already_in_use_or_c": "\" est déjà utilisé ou invalide",
+    "create": "Créer"
+  },
+  "DeleteProfileModal": {
+    "delete_profile": "Supprimer le profil",
+    "this_will_remove_all_mods_and": "Cela supprimera tous les mods et configs de ce profil.",
+    "if_this_was_an_accident_click": "En cas d'erreur, cliquez sur la zone sombre ou la croix en haut à droite.",
+    "are_you_sure_you_d_like_to_del": "Voulez-vous vraiment supprimer ce profil ?"
+  },
+  "ImportProfileModal": {
+    "how_are_you_importing_a_profil": "Comment importez-vous le profil ?",
+    "how_are_you_updating_your_prof": "Comment mettez-vous à jour le profil ?",
+    "from_file": "Depuis un fichier",
+    "from_code": "Depuis un code",
+    "loading_file": "Chargement du fichier",
+    "a_file_selection_window_will_a": "Une fenêtre va s'ouvrir. Cela peut prendre un moment après le choix.",
+    "enter_the_profile_code": "Entrez le code du profil",
+    "invalid_code_check_for_typos": "Code invalide, vérifiez la saisie",
+    "refreshing_online_mod_list": "Actualisation de la liste en ligne",
+    "some_of_the_packages_in_the_pr": "Certains paquets sont inconnus. L'actualisation peut aider. Attendez...",
+    "waiting_for_mod_downloads_to_f": "Attente de la fin des téléchargements avant actualisation...",
+    "packages_to_be_installed": "Paquets à installer",
+    "these_packages_in_the_profile": "Ces paquets sont absents de Thunderstore et ne seront pas installés :",
+    "ensure_the_profile_is_intended": "Vérifiez que le profil correspond bien au jeu sélectionné.",
+    "these_packages_will_be_install": "Ces paquets seront installés :",
+    "i_understand_that_some_of_the": "Je comprends que certains mods ne seront pas importés",
+    "import": "Importer",
+    "are_you_going_to_be_updating_a": "Voulez-vous mettre à jour un profil ou en créer un nouveau ?",
+    "import_new_profile": "Importer nouveau profil",
+    "update_existing_profile": "Mettre à jour profil existant",
+    "import_a_profile": "Importer un profil",
+    "this_profile_will_store_its_ow": "Ce profil stockera ses propres mods séparément.",
+    "profile_name_required": "Nom du profil requis",
+    "is_available": "\" est disponible",
+    "is_either_already_in_use_or_c": "\" est déjà utilisé ou invalide",
+    "all_contents_of_the_profile_wi": "Tout le contenu du profil sera écrasé par celui du code/fichier.",
+    "select_a_profile_below": "Choisissez un profil ci-dessous :",
+    "create": "Créer",
+    "update_profile": "Mettre à jour le profil :",
+    "this_may_take_a_while_as_files": "Cela peut être long (téléchargements, extractions...).",
+    "please_do_not_close": "Veuillez ne pas fermer l'application"
+  },
+  "RenameProfileModal": {
+    "rename_a_profile": "Renommer le profil",
+    "this_profile_will_store_its_ow": "Ce profil stockera ses propres mods séparément.",
+    "profile_name_required": "Nom du profil requis",
+    "is_available": "\" est disponible",
+    "is_either_already_in_use_or_c": "\" est déjà utilisé ou invalide",
+    "rename": "Renommer"
+  },
+  "SettingsView": {
+    "settings": "Paramètres",
+    "advanced_options": "Options avancées pour {app} : {version}",
+    "search": "Rechercher :",
+    "search_for_a_setting": "Chercher un réglage",
+    "tabs": {
+      "all": "Tous",
+      "profile": "Profil",
+      "locations": "Emplacements",
+      "debugging": "Débogage",
+      "modpacks": "Modpacks",
+      "other": "Autres"
+    },
+    "items": {
+      "browse_data_folder": {
+        "action": "Parcourir le dossier de données",
+        "description": "Ouvrir le dossier où sont stockés les mods pour tous les jeux et profils."
+      },
+      "change_game_folder": {
+        "action": "Changer le dossier de {game}",
+        "description": "Changer l'emplacement du dossier {game} utilisé par {app}.",
+        "please_set_manually": "Veuillez définir manuellement"
+      },
+      "browse_profile_folder": {
+        "action": "Parcourir le dossier du profil",
+        "description": "Ouvrir le dossier où sont stockés les mods pour le profil actuel."
+      },
+      "change_data_folder": {
+        "action": "Changer le dossier de données",
+        "description": "Changer le dossier où sont stockés les mods pour tous les jeux et profils. Le dossier ne sera pas supprimé et les profils existants ne seront pas transférés."
+      },
+      "copy_log_to_clipboard": {
+        "action": "Copier le contenu du journal dans le presse-papiers",
+        "description": "Copier le texte du fichier LogOutput.log dans le presse-papiers, avec le formatage Discord.",
+        "exists": "Le fichier journal existe",
+        "not_exists": "Le fichier journal n'existe pas"
+      },
+      "copy_troubleshooting_info": {
+        "action": "Copier les infos de dépannage dans le presse-papiers",
+        "description": "Copier les paramètres et d'autres informations dans le presse-papiers, avec le formatage Discord.",
+        "share_info": "Partagez ces informations lors d'une demande de support sur Discord."
+      },
+      "toggle_download_cache": {
+        "action": "Activer/Désactiver le cache de téléchargement",
+        "description": "Le téléchargement d'un mod ignorera les mods stockés dans le cache. Mods seront toujours placés dans le cache.",
+        "enabled": "Actuel : le cache est activé (recommandé)",
+        "disabled": "Actuel : le cache est désactivé"
+      },
+      "set_launch_parameters": {
+        "action": "Définir les paramètres de lancement",
+        "description": "Fournir des arguments personnalisés pour démarrer le jeu.",
+        "steam_exec": "Ces commandes sont utilisées contre l'exécutable Steam au démarrage du jeu"
+      },
+      "clean_mod_cache": {
+        "action": "Nettoyer le cache des mods",
+        "description": "Libérer de l'espace supplémentaire occupé par les mods en cache qui ne sont pas actuellement dans un profil.",
+        "check_profiles": "Vérifier tous les profils pour les mods inutilisés et vider le cache"
+      },
+      "clean_online_mod_list": {
+        "action": "Nettoyer la liste des mods en ligne",
+        "description": "Supprime la copie locale de la liste des mods, forçant la prochaine actualisation à en récupérer une nouvelle."
+      },
+      "toggle_thunderstore_cdn": {
+        "action": "Changer le CDN Thunderstore préféré",
+        "description": "Changer de CDN jusqu'au redémarrage de l'application. Cela peut contourner des problèmes de téléchargement.",
+        "current": "Actuel : {label} ({url})"
+      },
+      "change_profile": {
+        "action": "Changer de profil",
+        "description": "Changer le profil de mods.",
+        "current": "Profil actuel : {name}"
+      },
+      "enable_all_mods": {
+        "action": "Activer tous les mods",
+        "description": "Activer tous les mods pour le profil actuel",
+        "status": "{enabled}/{total} activés"
+      },
+      "disable_all_mods": {
+        "action": "Désactiver tous les mods",
+        "description": "Désactiver tous les mods pour le profil actuel",
+        "status": "{disabled}/{total} désactivés"
+      },
+      "import_local_mod": {
+        "action": "Importer un mod local",
+        "description": "Installer un mod hors ligne à partir de vos fichiers.",
+        "not_all_installable": "Tous les mods ne peuvent pas être installés localement"
+      },
+      "export_profile_file": {
+        "action": "Exporter le profil en tant que fichier",
+        "description": "Exporter votre liste de mods et vos configurations dans un fichier.",
+        "share_easily": "Le fichier exporté peut être partagé avec des amis pour obtenir un profil identique rapidement et facilement"
+      },
+      "export_profile_code": {
+        "action": "Exporter le profil en tant que code",
+        "description": "Exporter votre liste de mods et vos configurations sous forme de code.",
+        "share_easily": "Le code exporté peut être partagé avec des amis pour obtenir un profil identique rapidement et facilement"
+      },
+      "update_all_mods": {
+        "action": "Mettre à jour tous les mods",
+        "description": "Mettre à jour rapidement chaque mod installé vers sa dernière version.",
+        "one_update": "1 mod a une mise à jour disponible",
+        "multi_updates": "{count} mods ont une mise à jour disponible"
+      },
+      "funky_mode": {
+        "action": "Activer/Désactiver le mode funky",
+        "description": "Activer/désactiver le mode funky.",
+        "enabled": "Actuel : activé",
+        "disabled": "Actuel : désactivé (par défaut)"
+      },
+      "switch_theme": {
+        "action": "Changer de thème",
+        "description": "Basculer entre les thèmes clair et sombre.",
+        "dark": "Actuel : thème sombre",
+        "light": "Actuel : thème clair (par défaut)"
+      },
+      "switch_card_type": {
+        "action": "Changer le type d'affichage des cartes",
+        "description": "Basculer entre les cartes étendues ou réduites.",
+        "expanded": "Actuel : étendu",
+        "collapsed": "Actuel : réduit (par défaut)"
+      },
+      "refresh_online_mod_list": {
+        "action": "Actualiser la liste des mods en ligne",
+        "description": "Rechercher de nouvelles sorties de mods.",
+        "refreshing": "Actualisation...",
+        "error": "Erreur lors de l'actualisation de la liste des mods : {error}",
+        "disabled_downloads": "L'actualisation de la liste des mods est désactivée pendant les téléchargements actifs.",
+        "cache_date": "Date du cache : {date}",
+        "no_api": "Aucune information API disponible"
+      },
+      "change_game": {
+        "action": "Changer de jeu",
+        "description": "Changer le jeu actuel"
+      },
+      "show_dependency_strings": {
+        "action": "Afficher les chaînes de dépendance",
+        "description": "Afficher une liste de mods installés avec leurs chaînes de version. Utilisé dans le tableau des dépendances du fichier manifest.json.",
+        "status": "Afficher les chaînes de dépendance pour {count} mod(s)"
+      },
+      "change_steam_folder": {
+        "action": "Changer le dossier Steam",
+        "description": "Changer l'emplacement du dossier Steam utilisé par {app}.",
+        "please_set_manually": "Veuillez définir manuellement"
+      },
+      "reset_installation": {
+        "action": "Réinitialiser l'installation de {game}",
+        "description": "Corriger les problèmes causés par des fichiers corrompus ou des restes de tentatives manuelles de modding.",
+        "status": "Cela supprimera tout le contenu du dossier {folder} et vérifiera les fichiers via Steam"
+      },
+      "change_launch_behaviour": {
+        "action": "Changer le comportement de lancement",
+        "description": "Sélectionner un comportement de lancement spécifique, comme forcer Steam à se lancer avec Proton",
+        "current": "Le comportement de lancement actuel est : {type}"
+      }
+    }
+  },
+  "OnlinePreviewPanel": {
+    "by": "Par",
+    "package_information": "Infos du paquet",
+    "this_mod_may_contain_potential": "Ce mod peut contenir du contenu explicite",
+    "downloads": "Téléchargements :",
+    "likes": "J'aime :",
+    "last_updated": "Mise à jour :",
+    "categories": "Catégories :",
+    "download": "Télécharger",
+    "view_online": "Voir en ligne",
+    "donate": "Faire un don",
+    "readme": "README",
+    "changelog": "CHANGELOG",
+    "dependencies": "Dépendances (",
+    "fetching": "Récupération",
+    "for": "pour",
+    "has_no_dependencies": "n'a aucune dépendance",
+    "unable_to_fetch_readme_for": "Impossible de charger le README pour",
+    "unable_to_fetch_changelog_for": "Impossible de charger le CHANGELOG pour"
+  },
+  "DownloadModVersionSelectModal": {
+    "select_a_version_of": "Choisir une version pour",
+    "to_download": "à télécharger",
+    "it_s_recommended_to_select_the": "Il est recommandé de prendre la dernière version.",
+    "using_outdated_versions_may_ca": "Utiliser des versions obsolètes peut causer des soucis.",
+    "you_need_to_select_a_version": "Vous devez choisir una version",
+    "is_the_recommended_version": "est la version recommandée",
+    "is_the_latest_version": "est la dernière version",
+    "is_an_outdated_version": "est une version obsolète",
+    "download_with_dependencies": "Télécharger avec les dépendances"
+  },
+  "DownloadProgressModal": {
+    "downloading": "Téléchargement",
+    "installing": "Installation",
+    "downloading_1": "Téléchargement :",
+    "of": "% de",
+    "extracting": "Extraction :",
+    "download_complete": "Téléchargement fini",
+    "installing_1": "Installation :",
+    "installing_waiting_for_downloa": "Installation : attente du téléchargement",
+    "waiting_for_download_to_finis": " : attente du téléchargement"
+  },
+  "InstalledModView": {
+    "looks_like_you_don_t_have_any": "Il semble que vous n'ayez aucun mod",
+    "click_the_online_tab_on_the_le": "Cliquez sur l'onglet En ligne ou",
+    "here": "ici",
+    "you_have": "Vous avez",
+    "available_mod_update": "mise à jour disponible",
+    "would_you_like_to": ". Voulez-vous",
+    "update_all": "tout mettre à jour ?"
+  },
+  "AssociatedModsModal": {
+    "mods_associated_with": "Mods associés à",
+    "dependencies": "Dépendances",
+    "dependants": "Dépendants",
+    "this_mod_has_no_dependencies_o": "Ce mod n'a aucune dépendance ou dépendant.",
+    "done": "Terminé"
+  },
+  "DisableModModal": {
+    "disabling": "Désactivation",
+    "other_mods_depend_on_this_mod": "D'autres mods en dépendent. Choisissez",
+    "disable_all": "Tout désactiver",
+    "to_disable_dependent_mods_othe": "pour éviter les erreurs.",
+    "mods_to_be_disabled": "Mods à désactiver",
+    "disable_all_recommended": "Tout désactiver (recommandé)",
+    "disable": "Désactiver",
+    "only": "uniquement"
+  },
+  "LocalModCard": {
+    "deprecated": "Obsolète",
+    "disabled": "Désactivé",
+    "by": "par",
+    "installed_on": "Installé le :",
+    "uninstall": "Désinstaller",
+    "disable": "Désactiver",
+    "enable": "Activer",
+    "associated": "Associés",
+    "website": "Site web",
+    "update": "Mettre à jour",
+    "download_dependency": "Télécharger la dépendance"
+  },
+  "SearchAndSort": {
+    "search": "Chercher",
+    "search_for_an_installed_mod": "Chercher un mod installé",
+    "sort": "Trier",
+    "disabled": "Désactivé"
+  },
+  "SkeletonLocalModCard": {
+    "disabled": "Désactivé",
+    "by": "par"
+  },
+  "UninstallModModal": {
+    "uninstalling": "Désinstallation",
+    "other_mods_depend_on_this_mod": "D'autres mods en dépendent. Choisissez",
+    "uninstall_all": "Tout désinstaller",
+    "to_uninstall_dependent_mods_ot": "pour éviter les erreurs.",
+    "mods_to_be_uninstalled": "Mods à désinstaller",
+    "uninstall_all_recommended": "Tout désinstaller (recommandé)",
+    "uninstall": "Désinstaller",
+    "only": "uniquement"
+  },
+  "OnlineModList": {
+    "pinned": "Épinglé",
+    "by": "par",
+    "deprecated": "Obsolète",
+    "last_updated": "Mise à jour :",
+    "categories": "Catégories :",
+    "download": "Télécharger",
+    "website": "Site web"
+  },
+  "OnlineModView": {
+    "search": "Chercher",
+    "sort": "Trier",
+    "filter": "Filtrer",
+    "use_the_numbers_below_to_chang": "Utilisez les numéros pour changer de page"
+  },
+  "UpdateAllInstalledModsModal": {
+    "no_mods_to_update": "Rien à mettre à jour",
+    "either_all_installed_mods_are": "Tout est à jour ou aucun mod n'est installé.",
+    "close": "Fermer",
+    "update_all_installed_mods": "Tout mettre à jour",
+    "all_installed_mods_will_be_upd": "Tous les mods vont passer à la dernière version.",
+    "any_missing_dependencies_will": "Les dépendances manquantes seront ajoutées.",
+    "the_following_mods_will_be_dow": "Ces mods seront téléchargés :",
+    "will_be_updated_to": "sera mis à jour vers :",
+    "update_all": "Tout mettre à jour"
+  },
+  "DownloadMonitor": {
+    "downloads": "Téléchargements",
+    "you_don_t_have_anything_downlo": "Aucun téléchargement en cours.",
+    "click": "Cliquez",
+    "here": "ici",
+    "to_download_something": "pour télécharger.",
+    "clear_finished": "Effacer terminés",
+    "download_failed": "Échec",
+    "download_complete": "Terminé",
+    "downloading": "Téléchargement :",
+    "extracting": "Extraction :",
+    "of": "% de",
+    "installing": "Installation :",
+    "waiting_for_download_to_finish": "Attente téléchargement",
+    "100_of": "100% de",
+    "complete": "% fait"
+  },
+  "Error404": {
+    "sorry_nothing_here": "Désolé, rien ici...",
+    "go_back": "Retour"
+  },
+  "GameSelectionScreen": {
+    "which_store_manages_your_game": "Quel store gère votre jeu ?",
+    "select_platform": "Choisir la plateforme",
+    "an_update_to_the_manager_has_o": "Le gestionnaire a été mis à jour et travaille en arrière-plan.",
+    "the_options_to_select_a_game_a": "Le choix du jeu est désactivé durant l'opération.",
+    "search_for_a_game": "Chercher un jeu",
+    "select": "Choisir",
+    "set_as_default": "Par défaut",
+    "mod_logo": "Logo du Mod"
+  },
+  "Help": {
+    "help": "Aide",
+    "getting_started_with_installin": "Débuter avec les mods",
+    "go_to_the_online_tab_find_a_mo": "Allez dans En ligne, trouvez un mod et cliquez sur Télécharger.",
+    "once_you_ve_installed_the_mods": "Une fois installé, cliquez sur",
+    "start_modded": "Lancer avec mods",
+    "in_the_top_left": "en haut à gauche.",
+    "slow_game_with_mods_stuttering": "Jeu lent ou saccades ?",
+    "this_is_likely_due_to_a_mod_th": "C'est souvent dû à un mod qui fait des erreurs. Essayez d'en désactiver la moitié pour tester.",
+    "if_the_issue_still_remains_the": "Si ça continue, désactivez l'autre moitié jusqu'à trouver le coupable.",
+    "in_the_case_of_stuttering_ther": "Des mods d'optimisation peuvent aider.",
+    "dedicated_servers": "Serveurs dédiés",
+    "dedicated_servers_aren_t_direc": "Pas supportés en direct, mais vous pouvez copier votre profil sur le serveur.",
+    "launching_the_game_from_outsid": "Lancer hors du gestionnaire",
+    "by_design_your_experience_by_s": "Par défaut, via Steam, le jeu sera en version originale (sans mods).",
+    "you_will_need_to_place_the_cor": "Vous devrez mettre l'argument requis dans vos paramètres de lancement.",
+    "for_steam_this_would_be_locate": "Sur Steam, cela se trouve dans les propriétés du jeu.",
+    "your_current_argument_would_be": "Votre argument actuel :",
+    "these_parameters_will_be_avail": "Dispo après installation de BepInEx.",
+    "copy_launch_arguments": "Copier les arguments",
+    "a_red_box_appears_when_i_try_t": "Une boîte rouge apparaît au lancement",
+    "read_the_suggestion_at_the_bot": "Lisez la suggestion en bas de la boîte.",
+    "i_m_taken_to_the_steam_store_p": "Je suis redirigé vers le store Steam",
+    "that_s_because_you_don_t_legal": "Vous ne possédez pas le jeu légalement. Seules les copies légales sont supportées.",
+    "a_text_window_appears_and_clos": "Une fenêtre texte s'ouvre et se ferme direct",
+    "try_running_reset": "Tentez \"Réinitialiser",
+    "installation_on_the_settings_s": "l'installation\" dans les Paramètres.",
+    "if_it_persists_force_exit_stea": "Sinon, fermez Steam et lancez avec mods Steam éteint.",
+    "potential_solutions": "Solutions",
+    "the_most_common_issues_are_sol": "Les soucis courants se règlent via ces instructions :",
+    "here": "ici",
+    "auto_updates": "Auto-updates",
+    "the_manager_updates_automatica": "Mise à jour automatique à la fermeture.",
+    "updates_are_downloaded_in_the": "Téléchargé en arrière-plan.",
+    "you_may_receive_a_prompt_to_ru": "Une demande admin peut apparaître pour",
+    "old_uninstaller": "old_uninstaller",
+    "as_an_admin_this_is_the_update": ". C'est l'outil de mise à jour.",
+    "if_a_problem_occurs_with_an_up": "En cas de souci, téléchargez le dernier installeur.",
+    "i_don_t_want_updates": "Je ne veux pas de mises à jour",
+    "on_github_there_is_a_portable": "Une version portable existe sur GitHub (pas d'auto-update).",
+    "aren_t_directly_supported_thro": "Pas supporté en direct, copiez votre profil manuellement."
+  },
+  "LinuxNativeGameSetup": {
+    "it_looks_like_you_ve_previousl": "On dirait que vous aviez déjà des arguments.",
+    "the_flatpak_version_of": "La version Flatpak de",
+    "now_uses_a_different_wrapper_s": "utilise un nouveau script wrapper.",
+    "you_must_update_your_launch_ar": "Vous devez mettre à jour vos arguments.",
+    "to_be_able_to_launch": "Pour lancer",
+    "on_linux_you_must_first_setup": "sur Linux, réglez bien vos options Steam.",
+    "this_needs_to_be_done_because": "Requis par l'injection BepInEx sur Unix.",
+    "please_copy_and_paste_the_foll": "Copiez et collez ceci dans",
+    "launch_options": "options de lancement :",
+    "copy_to_clipboard": "Copier",
+    "continue": "Continuer"
+  },
+  "Manager": {
+    "failed_to_set_the_steam_folder": "Erreur dossier Steam",
+    "the_steam_executable_was_not_s": "Exécutable Steam non choisi.",
+    "if_this_error_has_appeared_but": "Si c'est correct, lancez en admin.",
+    "failed_to_set_the": "Erreur dossier",
+    "folder": "",
+    "the_executable_must_be_either": "Doit être : \"",
+    "clearing_the": "Nettoyage du dossier",
+    "installation_directory": "d'installation",
+    "you_will_not_not_be_able_to_la": "Impossible de lancer sans vérifier les fichiers sur Steam.",
+    "steam_will_be_started_and_will": "Steam va vérifier",
+    "please_check_the_steam_window": "Vérifiez Steam pour le progrès.",
+    "i_understand": "Je comprends",
+    "dependency_string_list": "Liste des dépendances",
+    "close": "Fermer",
+    "set_custom_launch_parameters": "Paramètres personnalisés",
+    "some_arguments_are_provided_by": "Arguments par défaut :",
+    "modded": "Moddé :",
+    "these_parameters_will_be_avail": "Dispo après pose d'un gestionnaire de mods.",
+    "vanilla": "Original :",
+    "please_note_that_these_are_cal": "Appliqués à l'exécutable Steam. Attention.",
+    "enter_parameters": "Saisir paramètres",
+    "update_launch_parameters": "Mettre à jour"
+  },
+  "Profiles": {
+    "profile_selection": "Choix du profil",
+    "back_to_game_selection": "Retour au choix du jeu",
+    "select_profile": "Choisir",
+    "rename": "Renommer",
+    "create_new": "Nouveau",
+    "import_update": "Import / MAJ",
+    "delete": "Supprimer"
+  },
+  "Splash": {
+    "game_updates_may_break_mods_if": "Les MAJ du jeu peuvent casser les mods.",
+    "help": "Aide",
+    "about": "À propos",
+    "faq": "FAQ",
+    "go_back": "Retour",
+    "did_you_know": "Le saviez-vous ?",
+    "you_can_use_the_install_with_m": "Utilisez le bouton \"Install with Mod Manager\" sur",
+    "thunderstore": "Thunderstore",
+    "with_r2modman": "avec r2modman.",
+    "you_can_export_the_selected_pr": "Exportez votre profil en fichier ou code pour vos amis !",
+    "having_trouble": "Soucis ?",
+    "send_a_screenshot_of_the_error": "Mandez une capture sur le Discord Thunderstore.",
+    "about_r2modman": "Sur r2modman",
+    "it_s_created_by_ebkr_using_qua": "Créé par Ebkr via Quasar.",
+    "quasar_provides_the_following": "Quasar utilise ces outils :",
+    "electron": "Electron",
+    "node": "Node",
+    "vue": "Vue",
+    "typescript": "TypeScript",
+    "how_do_i_get_started": "Comment débuter ?",
+    "head_on_over_to_the_online_tab": "Allez dans En ligne et prenez BepInEx.",
+    "starting_the_game_with_mods": "Lancer avec mods",
+    "you_have_to_start_the_game_fro": "Lancez via le gestionnaire. Steam seul ne moddera pas.",
+    "modding_discord_server_feel_fr": "Discord modding.",
+    "send_a_screenshot_of_the_error_1": "Mandez une capture sur",
+    "r2modman": "r2modman"
+  }
+};
