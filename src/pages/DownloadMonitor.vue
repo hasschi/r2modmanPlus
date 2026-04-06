@@ -1,4 +1,5 @@
 <template>
+    <ManagerActivityBar/>
     <div id="download-monitor-view">
         <Hero :title="$t('DownloadMonitor.downloads')" subtitle="Monitor progress of downloads" hero-type="primary"/>
         <template v-if="store.state.download.allDownloads.length === 0">
@@ -133,6 +134,7 @@ import { DownloadStatusEnum } from '../model/enums/DownloadStatusEnum';
 import * as DownloadUtils from '../utils/DownloadUtils';
 import { getStore } from '../providers/generic/store/StoreProvider';
 import { State } from '../store';
+import ManagerActivityBar from '../components/navigation/ManagerActivityBar.vue';
 
 const store = getStore<State>();
 </script>
@@ -140,6 +142,8 @@ const store = getStore<State>();
 <style lang="scss" scoped>
 #download-monitor-view {
     width: 100%;
+    flex: 1;
+    overflow-y: auto;
 }
 
 .download-item-action-button {

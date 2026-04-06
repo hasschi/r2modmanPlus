@@ -2,16 +2,44 @@
     <div class="full-height">
         <div class="sticky-top sticky-top--no-shadow sticky-top--no-padding">
             <aside class="menu">
-                <div>
+                <div id="menu__top">
                     <p class="menu-label">{{ activeGame.displayName }}</p>
-                    <ul class="menu-list">
-                        <li>
-                            <a href="#" @click="launchGame(LaunchMode.MODDED)"><i class="fas fa-play-circle icon--margin-right"/>{{ $t('NavigationMenu.start_modded') }}</a>
-                        </li>
-                        <li>
-                            <a href="#" @click="launchGame(LaunchMode.VANILLA)"><i class="far fa-play-circle icon--margin-right"/>{{ $t('NavigationMenu.start_vanilla') }}</a>
-                        </li>
-                    </ul>
+                    <div class="launch-control">
+                        <div class="launch-split">
+                            <button class="launch-split__start" @click="launchGame(selectedMode)">
+                                <i class="fas fa-play fa-fw" />
+                                <span>
+                                    {{ selectedMode === LaunchMode.MODDED ? $t('NavigationMenu.start_modded') : $t('NavigationMenu.start_vanilla') }}
+                                </span>
+                            </button>
+                            <ActivityDropdown trigger="click" placement="bottom-end">
+                                <template #default="{ shown }">
+                                    <button class="launch-split__mode">
+                                        <p>
+                                            <i :class="['fas', shown ? 'fa-caret-up' : 'fa-caret-down']" />
+                                        </p>
+                                    </button>
+                                </template>
+                                <template #popper>
+                                    <ul class="menu-list">
+                                        <li v-if="selectedMode === LaunchMode.VANILLA">
+                                            <a v-close-popper @click="selectedMode = LaunchMode.MODDED">
+                                                <i class="fas fa-play fa-fw" />
+                                                {{ $t('NavigationMenu.start_modded') }}
+                                            </a>
+                                        </li>
+                                        <li v-else>
+                                            <a v-close-popper @click="selectedMode = LaunchMode.VANILLA">
+                                                <i class="fas fa-play fa-fw" />
+                                                {{ $t('NavigationMenu.start_vanilla') }}
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </template>
+                            </ActivityDropdown>
+                        </div>
+                    </div>
+                    <hr/>
                     <p class="menu-label">{{ $t('NavigationMenu.mods') }}</p>
                     <div>
                         <ul class="menu-list">
@@ -28,48 +56,39 @@
                                     <i class="fas fa-globe tagged-link__icon icon--margin-right" />
                                     <span class="tagged-link__content">{{ $t('NavigationMenu.online') }}</span>
 
-                                    <router-link :to="{name: 'downloads'}" class="margin-right--half-width">
-                                        <i class="tag fas fa-download is-primary" />
-                                    </router-link>
-                                    <span :class="getTagLinkClasses(['manager.online', 'downloads'])">{{thunderstoreModCount}}</span>
+                                <router-link :to="{name: 'downloads'}" class="margin-right--half-width">
+                                    <i class="tag fas fa-download is-primary" />
                                 </router-link>
-                            </li>
-                        </ul>
-                    </div>
-                    <p class='menu-label'>{{ $t('NavigationMenu.other') }}</p>
-                    <ul class='menu-list'>
-                        <li>
-                            <router-link :to="{name: 'config-editor'}">
-                                <i class="fas fa-edit icon--margin-right" />
-                                {{ $t('NavigationMenu.config_editor') }}
-                            </router-link>
-                        </li>
-                        <li>
-                            <router-link :to="{name: 'manager.settings'}">
-                                <i class="fas fa-cog icon--margin-right" />
-                                {{ $t('NavigationMenu.settings') }}
-                            </router-link>
-                        </li>
-                        <li>
-                            <router-link :to="{name: 'help'}">
-                                <i class="fas fa-question-circle icon--margin-right" />
-                                {{ $t('NavigationMenu.help') }}
+                                <span :class="getTagLinkClasses(['manager.online', 'downloads'])">{{thunderstoreModCount}}</span>
                             </router-link>
                         </li>
                     </ul>
-                    <slot></slot>
                 </div>
-                <div class="menu-bottom">
-                    <div id="profile-switcher" @click="openProfileManagementModal">
-                        <img :src="ProtocolProvider.getPublicAssetUrl(`/images/game_selection/${activeGame.gameImage}`)" :alt="$t('NavigationMenu.game_icon')"/>
-                        <div>
-                            <p>{{ profile.getProfileName() }}</p>
-                            <p class="sub-action">{{ $t('NavigationMenu.profile') }}</p>
-                        </div>
-                    </div>
-                </div>
-            </aside>
-        </div>
+                <hr/>
+                <p class='menu-label'>{{ $t('NavigationMenu.other') }}</p>
+                <ul class='menu-list'>
+                    <li>
+                        <router-link :to="{name: 'config-editor'}">
+                            <i class="fas fa-edit icon--margin-right" />
+                            {{ $t('NavigationMenu.config_editor') }}
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{name: 'manager.settings'}">
+                            <i class="fas fa-cog icon--margin-right" />
+                            {{ $t('NavigationMenu.settings') }}
+                        </router-link>
+                    </li>
+                    <li>
+                        <router-link :to="{name: 'help'}">
+                            <i class="fas fa-question-circle icon--margin-right" />
+                            {{ $t('NavigationMenu.help') }}
+                        </router-link>
+                    </li>
+                </ul>
+                <slot></slot>
+            </div>
+        </aside>
     </div>
 </template>
 
@@ -91,9 +110,12 @@ import { getStore } from '../../providers/generic/store/StoreProvider';
 import { State } from '../../store';
 import VueRouter, { useRouter } from 'vue-router';
 import ProtocolProvider from '../../providers/generic/protocol/ProtocolProvider';
+import ActivityDropdown from '../v2/ActivityDropdown.vue';
 
 const store = getStore<State>();
 const router = useRouter();
+
+const selectedMode = ref<LaunchMode>(LaunchMode.MODDED);
 
 const activeGame = computed<Game>(() => store.state.activeGame);
 const profile = computed<Profile>(() => store.getters['profile/activeProfile']);
@@ -108,10 +130,6 @@ const thunderstoreModCount = computed(() =>
 function getTagLinkClasses(routeNames: string[]) {
     const base = ["tag", "tagged-link__tag"];
     return router && router.currentRoute.value && routeNames.includes(router.currentRoute.value.name as string || "") ? [...base, "is-link"] : [...base, "is-inactive-link"];
-}
-
-function openProfileManagementModal() {
-    store.commit("openProfileManagementModal");
 }
 
 async function launchGame(mode: LaunchMode) {
@@ -135,6 +153,67 @@ async function launchGame(mode: LaunchMode) {
 
 <style lang="scss" scoped>
 
+hr {
+    background-color: var(--nav-hr-background-color);
+    margin: 1rem 0;
+}
+
+.launch-control {
+    padding: 0.25rem 0 0;
+}
+
+.launch-split {
+    display: flex;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.launch-split__start {
+    flex: 1;
+    background-color: var(--scheme-primary, #3273dc);
+    color: white;
+    border: none;
+    padding: 0.55em 1em;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: filter 0.15s ease;
+    display: flex;
+    text-align: left;
+    place-items: center;
+
+    &:hover { filter: brightness(1.12); }
+    &:active { filter: brightness(0.9); }
+
+    & > * {
+        flex: 1;
+    }
+
+    & > i {
+        flex: 0;
+        margin-right: 0.5rem;
+    }
+}
+
+.launch-split__mode {
+    background-color: var(--scheme-primary, #3273dc);
+    color: white;
+    border: none;
+    padding: 0.55em 0.75em;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.4em;
+    white-space: nowrap;
+    transition: filter 0.15s ease;
+    margin-left: 2px;
+
+    &:hover { filter: brightness(1.12); }
+    &:active { filter: brightness(0.9); }
+}
+
 .menu-list a a {
     padding: 0;
 }
@@ -142,15 +221,18 @@ async function launchGame(mode: LaunchMode) {
 .menu {
     display: flex;
     flex-direction: column;
-    height: calc(100vh);
-    //background-color: rgba(11, 20, 32, 0.46);
     padding-right: 1rem;
+    height: 100%;
 
     & > * {
         flex: 1;
     }
 
-    &-bottom {
+    &__top {
+        flex: 1;
+    }
+
+    &__bottom {
         flex: 0;
         padding-top: 1rem;
     }

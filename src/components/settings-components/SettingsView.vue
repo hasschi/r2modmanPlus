@@ -442,5 +442,9 @@ function emitInvoke(invoked: string) {
 <style lang="scss" scoped>
 #settings-view {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow-y: auto;
 }
 </style>
